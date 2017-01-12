@@ -1,0 +1,5 @@
+node_modules
+.DS_Store
+.history
+.vscode
+bower_components

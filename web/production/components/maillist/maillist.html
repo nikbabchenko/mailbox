@@ -1,0 +1,21 @@
+<div class="inbox">
+    <h1 class="page-header">{{ title }}</h1>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Sender</th>
+                    <th>Text</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in mails track by $index" ng-click="showFullMail(item)" class="inbox-item">
+                    <td>{{ item.sender }}</td>
+                    <td>{{ item.title }}</td>
+                    <td>{{ item.date }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,4 @@
+{
+  "directory": "production/vendors/",
+  "timeout": 120000
+}

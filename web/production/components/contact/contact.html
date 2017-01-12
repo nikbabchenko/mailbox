@@ -1,0 +1,36 @@
+<div class="contact col-md-6">
+    <div class="contact-photo">
+        <img src="https://placeimg.com/400/250/people" alt="" class="image-responsive">
+    </div>
+    <h3 class="contact-title" ng-hide="isEdit">
+        <span >Username:</span> {{ user.name }}
+    </h3>
+    <input type="text" ng-show="isEdit" ng-model="contact.title" class="form-control">
+
+    <div class="content" ng-hide="isEdit">
+        <div class="content-item">
+            <span>Company:</span>
+            {{ user.company.name }}
+        </div>
+        <div class="content-item">
+            <span>Phone</span>:</span>
+            {{ user.phone }}
+        </div>
+        <div class="content-item">
+            <span>Website</span>:</span>
+            {{ user.website }}
+        </div>
+        <div class="content-item">
+            <span>Adress</span>:
+            {{ user.address.city }} , {{ user.address.street }}
+        </div>
+    </div>
+    <div class="contact-edit" ng-show="isEdit">
+        <textarea type="text" ng-model="contact.content"></textarea>
+    </div>
+    <div class="contact-controls" ng-show="showControls">
+        <button class="btn btn-warning" ng-click="editMail()" ng-hide="isEdit"><span class="glyphicon glyphicon-pencil"></span> Edit</button>
+        <button class="btn btn-primary" ng-click="saveMail()" ng-hide="!isEdit"><span class="glyphicon glyphicon-save"></span> Save</button>
+        <buttom class="btn btn-danger" ng-click="deleteMail()"><span class="glyphicon glyphicon-trash"></span> Delete</buttom>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="mail">
+    <h1 class="mail-title"><span ng-hide="isEdit">{{ mail.title }}</span> <input type="text" ng-show="isEdit" ng-model="mail.title" class="form-control"></h1>
+    <div class="mail-meta">
+        <strong>Sender:</strong> {{ mail.sender }} |
+        <strong>Date:</strong> <span class="mail-date">{{ mail.date }}</span>
+    </div>
+    <div class="mail-content" ng-hide="isEdit">
+        {{ mail.content }}
+    </div>
+    <div class="mail-edit" ng-show="isEdit">
+        <textarea type="text" ng-model="mail.content"></textarea>
+    </div>
+    <div class="mail-controls">
+        <button class="btn btn-warning" ng-click="editMail()" ng-hide="isEdit"><span class="glyphicon glyphicon-pencil"></span> Edit</button>
+        <button class="btn btn-primary" ng-click="saveMail()" ng-hide="!isEdit"><span class="glyphicon glyphicon-save"></span> Save</button>
+        <buttom class="btn btn-danger" ng-click="deleteMail()"><span class="glyphicon glyphicon-trash"></span> Delete</buttom>
+    </div>
+</div>

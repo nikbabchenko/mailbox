@@ -1,0 +1,15 @@
+<div class="sign-in">
+    <form  ng-submit="login(username, password)" ng-if="!user">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <div class="sign-in__item">
+            <label class="sr-only" for="inputEmail">Email address</label>
+            <input type="text" id="inputEmail" class="form-control" placeholder="Email address" ng-model="username" autofocus>
+        </div>
+        <div class="sign-in__item">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="text" id="inputPassword" class="form-control" placeholder="Password" ng-model="password" autocomplete="off">
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+    <button class="btn btn-lg btn-danger btn-block" type="submit" ng-click="logout()">Logout</button>
+</div>

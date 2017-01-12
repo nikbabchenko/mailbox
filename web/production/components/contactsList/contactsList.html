@@ -1,0 +1,28 @@
+<div class="contacts-list">
+    <h1 class="page-header">{{ title }}</h1>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Website</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in users track by $index" class="inbox-item" ng-click="showUser(item.id)">
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.email }}</td>
+                    <td>{{ item.phone }}</td>
+                    <td>{{ item.website }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="control-bar" ng-show="showControls">
+        <button class="btn btn-danger">
+            Add contact
+        </button>
+    </div>
+</div>

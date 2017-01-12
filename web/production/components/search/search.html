@@ -1,0 +1,12 @@
+<form class="navbar-form navbar-right">
+    <div class="search-wrapper">
+        <input type="text" class="form-control" placeholder="Search..." ng-model="searchString">
+        
+        <ul class="search-result">
+            <li ng-repeat="item in arr | mailBoxSearch: searchString" ng-click="clearInput();">
+                <a ui-sref="user({id: item.id})">{{ item.name }}</a>
+            </li>
+        </ul>
+    </div>
+</form>
+

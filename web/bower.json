@@ -1,0 +1,22 @@
+{
+  "name": "go",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "Nik Babchenko"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "angular"
+  ],
+  "homepage": "",
+  "private": true,
+  "directory": "production/bower_components/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
