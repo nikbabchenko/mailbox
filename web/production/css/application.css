@@ -25,6 +25,7 @@ button:visited {
 
 .page-header {
   margin-top: 0;
+  text-transform: capitalize;
 }
 
 .sub-header {
@@ -231,6 +232,17 @@ button:visited {
   margin-bottom: 10px;
 }
 
+
 .logout-btn {
   margin-top: 10px;
+}
+
+.add-form{
+  margin-bottom: 20px;
+}
+
+.add-form-field{
+  display: block;
+  max-width: 30%;
+  margin-bottom: 10px;
 }
