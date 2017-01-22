@@ -1,4 +1,4 @@
-app.directive('login', function (UserFactory, AuthTokenFactory) {
+app.directive('login', function ($state, $rootScope, UserFactory, AuthTokenFactory) {
     return {
         restrict: 'E',
         replace: true,
@@ -20,7 +20,6 @@ app.directive('login', function (UserFactory, AuthTokenFactory) {
             } else if (!username && !password) {
                 alert('You should enter login and password');
                 return;
-            
             }
 
             UserFactory
@@ -28,23 +27,29 @@ app.directive('login', function (UserFactory, AuthTokenFactory) {
                 .then(function success(response) {
                     console.log(response.data.user);
                     scope.user = response.data.user;
-                    alert(response.data.token);
                     return response;
                 }, handleError)
                 .then(function (response) {
                     AuthTokenFactory.setToken(response.data.token);
+                    goToHome();
+                    $rootScope.$broadcast('signed-in');
+                    debugger;
                     return response;
                 });
 
                 function handleError (err) {
                     alert(err.data);
-                    return err;
                 };
         }
 
         function logout () {
             AuthTokenFactory.setToken();
             scope.user = null;
+            $rootScope.$broadcast('signed-out');
+        }
+
+        function goToHome () {
+            $state.go('home');
         }
     }
 });

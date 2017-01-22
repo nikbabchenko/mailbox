@@ -230,3 +230,7 @@ button:visited {
 .sign-in__item {
   margin-bottom: 10px;
 }
+
+.logout-btn {
+  margin-top: 10px;
+}
