@@ -1,0 +1,20 @@
+<div ng-controller="AddContactPageController as vm">
+
+    <div class="inbox">
+        <h1 class="page-header">Add Contact</h1>
+        <form class="add-form">
+            <input type="text" class="add-form-field form-control" placeholder="Name" ng-model="name">
+            <input type="tel" class="add-form-field form-control" placeholder="Company" ng-model="company">
+            <input type="email" class="add-form-field form-control" placeholder="E-mail" ng-model="email">
+            <input type="tel" class="add-form-field form-control" placeholder="Phone" ng-model="phone">
+            <input type="text" class="add-form-field form-control" placeholder="Website" ng-model="site">
+        </form>
+        <div class="contact-controls">
+            <button class="btn btn-primary" ng-click="vm.addContact(name, company, email, phone, site)" ><span class="glyphicon glyphicon-save"></span> Save</button>
+            <buttom class="btn btn-danger" ng-click="vm.goBack()"><span class="glyphicon glyphicon-trash"></span> Cancel</buttom>
+        </div>
+    </div>
+
+</div>
+
+

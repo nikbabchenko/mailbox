@@ -8,6 +8,7 @@ app.directive('contact', function (UserService, $state, $timeout) {
     };
 
     function link(scope) {
+        console.log($state);
         var id = $state.params.id;
         var contact;
         scope.showControls = false;
