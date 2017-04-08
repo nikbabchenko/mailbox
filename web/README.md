@@ -1,3 +1,3 @@
 # mailbox
 
-Learning angular with a small project
+# *Learning angular with a small project*
