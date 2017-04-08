@@ -1,4 +1,6 @@
 {
-  "directory": "production/vendors/",
-  "timeout": 120000
+    "directory": "dev/bower_components/",
+    "scripts": {
+        "postinstall": "gulp wiredep"
+    }
 }

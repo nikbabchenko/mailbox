@@ -1,7 +1,5 @@
 {
-  "name": "go",
-  "description": "",
-  "main": "index.html",
+  "name": "mailbox",
   "authors": [
     "Nik Babchenko"
   ],
@@ -9,9 +7,15 @@
   "keywords": [
     "angular"
   ],
-  "homepage": "",
-  "private": true,
-  "directory": "production/bower_components/",
+  "homepage": "https://github.com/nikbabchenko/mailbox",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "jquery": "^3.2.1",
+    "bootstrap": "3.3.4",
+    "angular-ui-router": "^0.4.2",
+    "owlcarousel": "^1.3.2"
+  },
+  "description": "cool",
   "ignore": [
     "**/.*",
     "node_modules",

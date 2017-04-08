@@ -1,0 +1,97 @@
+<!doctype html>
+<html ng-app="mailBox">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+
+    <!-- build:css css/lib.css-->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css css/app.css-->
+        <!-- inject:css -->
+        <link rel="stylesheet" href=".tmp/app.css">
+        <!-- endinject -->
+    <!-- endbuild -->
+
+    <!-- inject:head:css -->
+    <!-- endinject -->
+
+    <title>MailBox</title>
+</head>
+<body ng-controller="CommonController as main">
+    <navbar></navbar>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <div class="new-email">
+                    <button class="btn btn-primary">
+                        New email
+                    </button>
+                </div>
+                <menu></menu>
+                <div class="logout" ng-if="main.user">
+                    <button class="btn btn-danger" ng-click="main.logout()">
+                        Logout
+                    </button>
+                </div>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <ui-view></ui-view>
+            </div>
+        </div>
+    </div>
+
+    <!-- build:js js/lib.js-->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js js/app.js-->
+        <!-- inject:js -->
+        <script src="app.module.js"></script>
+        <script src="pages/add-contact/add-contact.module.js"></script>
+        <script src="pages/mail-page/mail-page.module.js"></script>
+        <script src="components/common/api_url.constant.js"></script>
+        <script src="components/common/app.config.js"></script>
+        <script src="components/common/common.controller.js"></script>
+        <script src="components/contact/contact.directive.js"></script>
+        <script src="components/contactsList/contactsList.directive.js"></script>
+        <script src="components/help/help.directive.js"></script>
+        <script src="components/homepage/homepage.directive.js"></script>
+        <script src="components/login/login.directive.js"></script>
+        <script src="components/mail/mail.directive.js"></script>
+        <script src="components/maillist/maillist.directive.js"></script>
+        <script src="components/menu/menu.directive.js"></script>
+        <script src="components/navbar/navbar.directive.js"></script>
+        <script src="components/search/search.directive.js"></script>
+        <script src="components/common/services/AuthInterCepter.js"></script>
+        <script src="components/common/services/AuthTokenFactory.js"></script>
+        <script src="components/common/services/mailBoxSearch.js"></script>
+        <script src="components/common/services/mailService.js"></script>
+        <script src="components/common/services/userFactory.js"></script>
+        <script src="components/common/services/userService.js"></script>
+        <script src="pages/add-contact/add-contact.config.js"></script>
+        <script src="pages/add-contact/add-contact.ctrl.js"></script>
+        <script src="pages/login/login.a-module.js"></script>
+        <script src="pages/login/login.config.js"></script>
+        <script src="pages/login/login.ctrl.js"></script>
+        <script src="pages/mail-page/mail-page.config.js"></script>
+        <script src="pages/mail-page/mail-page.ctrl.js"></script>
+        <!-- endinject -->
+
+        <!-- templates:js -->
+        <!-- endinject -->
+    <!-- endbuild -->
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app="mailBox">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+
+    <link rel="stylesheet" href="css/lib-b093fc806d.css">
+
+    <link rel="stylesheet" href="css/app-92e7806879.css">
+
+    <!-- inject:head:css -->
+    <!-- endinject -->
+
+    <title>MailBox</title>
+</head>
+<body ng-controller="CommonController as main">
+    <navbar></navbar>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <div class="new-email">
+                    <button class="btn btn-primary">
+                        New email
+                    </button>
+                </div>
+                <menu></menu>
+                <div class="logout" ng-if="main.user">
+                    <button class="btn btn-danger" ng-click="main.logout()">
+                        Logout
+                    </button>
+                </div>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <ui-view></ui-view>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/lib-173f301ba5.js"></script>
+
+    <script src="js/app-f729801687.js"></script>
+
+</body>
+</html>
